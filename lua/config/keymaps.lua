@@ -5,7 +5,17 @@
 local function insertFullPath()
   local filepath = vim.fn.expand('%')
   vim.fn.setreg('+', filepath) -- write to clippoard
+  vim.notify("Full path copied to clipboard: " .. filepath)
 end
 
-vim.keymap.set('n', '<leader>pc', insertFullPath, { noremap = true, silent = true })
+local function insertRelativePath()
+  -- local filepath = vim.fn.expand('%:p')
+ local filepath = vim.fn.fnamemodify(vim.fn.expand("%"), ":.")
+
+  vim.fn.setreg('+', filepath) -- write to clippoard
+  vim.notify("Relative path copied to clipboard: " .. filepath)
+end
+
+vim.keymap.set('n', '<leader>pp', insertFullPath, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>pr', insertRelativePath, { noremap = true, silent = true })
 
