@@ -9,4 +9,5 @@ vim.g.ai_cmp = false
 local opt = vim.opt
 
 opt.relativenumber = false
+opt.clipboard = ""
 
