@@ -11,15 +11,26 @@
 return {
   -- add gruvbox
   -- { "ellisonleao/gruvbox.nvim" },
-  {
-    "scottmckendry/cyberdream.nvim",
-    opts = {},
-  },
+  -- {
+  --   "scottmckendry/cyberdream.nvim",
+  --   opts = {},
+  -- },
+  -- Lua
+  -- {
+  --   "f-person/auto-dark-mode.nvim",
+  --   opts = {
+  --     -- your configuration comes here
+  --     -- or leave it empty to use the default settings
+  --     -- refer to the configuration section below
+  --   }
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin-mocha",
-      colorscheme = "cyberdream",
+      -- colorscheme = "catppuccin-latte",
+      -- colorscheme = "cyberdream",
+      -- colorscheme = "cyberdream",
       -- colorscheme = "cyberdream",
 
     },
